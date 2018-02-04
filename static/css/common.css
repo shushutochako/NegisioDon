@@ -1,0 +1,34 @@
+.header-container{
+  top: 0;
+  left: 0;
+  right: 0;
+  background: gray;
+  height: 40px;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+
+.common-header {
+  margin-left: 100px;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;  
+}
+
+.inner-container {
+  color: white;
+  line-height: 40px;
+  margin-right: 100px;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-justify-content: flex-end; /* Safari */
+  justify-content:         flex-end;
+  -webkit-flex-grow: 1; /* Safari */
+  flex-grow:         1;
+}
+
+.header-link{
+  color: white;
+  text-decoration: none;
+}
+
