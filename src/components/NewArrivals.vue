@@ -2,14 +2,19 @@
   <div class="newArrivals">
     <h1>{{ msg }}</h1>
     <div class="container">
-      <li v-for="item in items" v-bind:key="item.message">
-        <div class="content">{{ item.message }}</div>
-      </li>
+      <newArrival-item v-for="item in items" :item="item" :key="item.message"/>
     </div>
   </div>
 </template>
 
 <script>
+
+import Vue from 'vue'
+import NewArrivalItem from './NewArrivalItem'
+
+//  コンポーネントを登録
+Vue.component('newArrival-item', NewArrivalItem)
+
 export default {
   name: "NewArrivals",
   data() {
@@ -33,6 +38,8 @@ export default {
     }
   }
 };
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -57,11 +64,4 @@ a {
   flex-wrap: wrap;
   justify-content:center;
 }
-.content {
-  margin: 10px;
-  background: lightblue;
-  width: 300px;
-  height: 300px;
-}
-
 </style>
