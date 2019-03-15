@@ -1,13 +1,9 @@
-**Example 1**
-<div>
-
-```mermaid
-sequenceDiagram
-  A->> B: Query
-  B->> C: Forward query
-  Note right of C: Thinking...
-  C->> B: Response
-  B->> A: Forward response
-```
-
+<div class="mermaid">
+graph LR
+    A --> C
+    B --> C
+    B --> D
+    C --> D
 </div>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
